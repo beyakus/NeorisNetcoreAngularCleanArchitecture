@@ -1,0 +1,36 @@
+@import "variables";
+
+.avatar-content {
+  background-color: $cemex-blue;
+  color: $white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.menu {
+  // background-color: $background-gray;
+  box-shadow: 0 0 12pt rgba(0, 0, 0, 0.25);
+  border-radius: 4pt;
+  animation: fadeIn 0.1s ease-out;
+  opacity: 1;
+  display: block;
+  padding: 1rem;
+  min-width: 6.25rem;
+  min-height: 6.25rem;
+  & div {
+    cursor: pointer;
+  }
+}
+.image__avatar {
+  height: 2.938rem;
+  left: 3.75rem;
+  top: 0.188rem;
+
+  position: absolute;
+}
+
+.main__container {
+  background-color: $background-gray;
+  height: 100%;
+}

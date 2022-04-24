@@ -1,0 +1,44 @@
+<div class="container">
+  <form class="form-content">
+    <cwc-ld-input
+      class="col text-input"
+      type="text"
+      [label]="'auth.username' | translate"
+      required="true"
+      [placeholder]="'auth.username-placeholder' | translate"
+      id="cwc-username"
+    >
+    </cwc-ld-input>
+
+    <cwc-ld-input
+      class="col text-input"
+      type="password"
+      [label]="'auth.password' | translate"
+      required="true"
+      maxlength="20"
+      id="cwc-password"
+      [placeholder]="'auth.password-placeholder' | translate"
+      variant="'regular'"
+    ></cwc-ld-input>
+
+    <cwc-button
+      [disabled]="false"
+      [variant]="'regular'"
+      size="'medium'"
+      title="'{{ 'auth.button-text' | translate }}'"
+      type="'button'"
+      rtl="false"
+      (cwcClick)="login()"
+      >{{ "auth.button-text" | translate }}</cwc-button
+    >
+
+    <cwc-button
+      [variant]="'link'"
+      label="asas"
+      title="{{ 'auth.forgot-password' | translate }}"
+      (cwcClick)="forgotPassword()"
+      type="'button'"
+      >{{ "auth.forgot-password" | translate }}</cwc-button
+    >
+  </form>
+</div>

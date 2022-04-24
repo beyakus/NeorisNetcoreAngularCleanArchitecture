@@ -1,0 +1,21 @@
+{
+  "shared": {},
+  "menu": {
+    "caiman": {
+      "title": "Caiman",
+      "carriers": "Carriers",
+      "users": "Users",
+      "manual-trips": "Manual trips"
+    }
+  },
+
+  "auth": {
+    "username": "User Email",
+    "password": "password",
+    "password-placeholder": "Password capture",
+    "username-placeholder": "User email capture",
+    "button-text": "Login",
+    "forgot-password": "Forgot password?",
+    "send": "Send"
+  }
+}

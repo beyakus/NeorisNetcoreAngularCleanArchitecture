@@ -1,0 +1,30 @@
+@import "variables.scss";
+
+.bg-login {
+  color: $white;
+  background: $dark-blue;
+  height: 100vh;
+  background-image: url("../../../assets/img/dashboard__bg-min.jpg");
+  background-size: cover;
+  background-position: center left;
+  align-self: center;
+}
+
+.login-access {
+  height: 100vh;
+  align-items: center;
+  background: $white;
+}
+
+.header-content {
+  margin: 1rem 0 3.125rem;
+  width: 100%;
+}
+
+img {
+  width: 90%;
+}
+
+.img-container {
+  justify-content: center;
+}

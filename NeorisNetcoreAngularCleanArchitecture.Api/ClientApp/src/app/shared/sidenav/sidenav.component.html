@@ -1,0 +1,27 @@
+<!-- Sección del navbar -->
+<app-navbar></app-navbar>
+<mat-sidenav-container class="sidenav" autosize>
+  <mat-sidenav #sidenav mode="over" class="sidenav__container--bg">
+    <mat-list role="list">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-list-item>
+            <span class="full-width"> Opcion 1 </span>
+          </mat-list-item>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item>
+            <span class="full-width cursor__pointer nav__position-text">
+              Sub menu
+            </span>
+            <mat-icon class="nav__position-left" mat-list-icon> home </mat-icon>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav__main--bg">
+    <!-- En esta sección se inicia el contenido del dashboard -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

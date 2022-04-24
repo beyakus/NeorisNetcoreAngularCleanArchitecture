@@ -1,0 +1,76 @@
+<section class="animate__animated animate__fadeIn">
+  <cwc-page [rtl]="rtl">
+    <cwc-header
+      class="show-desktop"
+      slot="header"
+      [showMenuButton]="true"
+      [variant]="variant"
+      [rtl]="rtl"
+      override
+    >
+      <div class="d-flex justify-content-between align-items-center">
+        <cwc-avatar
+          cdkOverlayOrigin
+          class="avatar-content"
+          [name]="userName"
+          [size]="'small'"
+        >
+        </cwc-avatar>
+      </div>
+      <img
+        src="../../../assets/img/cement-company.png"
+        alt="Cemex"
+        class="image__avatar"
+      />
+    </cwc-header>
+    <cwc-sidenav
+      #sideNav
+      slot="sidenav"
+      [width]="width"
+      [variant]="variant"
+      [rtl]="rtl"
+    >
+      <cwc-sidenav-menu id="menuNav" slot="menu-items" [variant]="variant">
+        <ng-container *ngFor="let opt of menu">
+          <cwc-sidenav-menu-item
+            [label]="opt.name | translate"
+            [iconName]="opt?.icon"
+          >
+            <cwc-sidenav-menu-item
+              *ngFor="let sub of opt.subMenu"
+              [label]="sub.name | translate"
+              [routerLink]="sub?.route"
+            ></cwc-sidenav-menu-item>
+          </cwc-sidenav-menu-item>
+        </ng-container>
+      </cwc-sidenav-menu>
+      <cwc-footer-menu slot="links" [variant]="variant" [rtl]="rtl">
+        <cwc-footer-menu-item
+          label="Legal"
+          href="{{ termsRoute }}"
+          target="_blank"
+        ></cwc-footer-menu-item>
+        <cwc-footer-menu-item
+          label="Privacy"
+          href="{{ termsPolicy }}"
+          target="_blank"
+        ></cwc-footer-menu-item>
+        <cwc-footer-menu-item
+          label="cemex.com"
+          href="https://www.cemex.com"
+          target="_blank"
+        ></cwc-footer-menu-item>
+      </cwc-footer-menu>
+      <div slot="copyright">
+        © 2017-2021 CEMEX
+        <br />
+        International Holding AG.
+        <br />
+        All rights reserved.
+      </div>
+    </cwc-sidenav>
+    <div slot="main" class="p-3 main main__container">
+      <router-outlet></router-outlet>
+    </div>
+  </cwc-page>
+</section>
